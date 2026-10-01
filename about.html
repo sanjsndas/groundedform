@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Grounded Form Stories · Interior Design & Architecture Journal</title>
+  <meta name="description" content="About Grounded Form Stories — an independent editorial publication exploring interior design, architecture, materials, and modern living.">
+  <meta name="keywords" content="about, interior design journal, architecture publication, editorial, grounded form stories">
+  <meta name="author" content="Grounded Form Stories">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About · Grounded Form Stories">
+  <meta property="og:description" content="Independent editorial publication exploring interior design, architecture, materials, space planning, lighting, and modern living.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://groundedformstories.com/about.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&h=630&fit=crop">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://groundedformstories.com/about.html">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fcfaf7;
+      color: #1e1e1e;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid #e5dfd7;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+    h4 {
+      font-size: 1.25rem;
+      margin: 1.25rem 0 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: #4a3f35;
+      text-decoration: none;
+      border-bottom: 1px solid #d9d0c5;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #8b6b4f;
+      border-bottom-color: #8b6b4f;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* LAYOUT */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* HEADER */
+    .site-header {
+      background: #fcfaf7;
+      border-bottom: 1px solid #e2dbd2;
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+      border-bottom: none;
+    }
+    .logo span {
+      color: #b2926f;
+      font-style: italic;
+    }
+    .main-nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .main-nav a {
+      border-bottom: none;
+      font-size: 0.95rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #3b352f;
+    }
+    .main-nav a:hover {
+      color: #b2926f;
+    }
+    .search-bar {
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d9d0c5;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      border-radius: 0;
+    }
+    .search-bar input:focus {
+      outline: 1px solid #b2926f;
+      border-color: #b2926f;
+    }
+
+    /* ABOUT PAGE SPECIFIC */
+    .about-hero {
+      margin: 3rem 0 2rem;
+      text-align: center;
+    }
+    .about-hero h1 {
+      max-width: 800px;
+      margin: 0 auto 1rem;
+    }
+    .about-hero .lead {
+      font-size: 1.3rem;
+      color: #4b443c;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin: 3rem 0;
+      align-items: start;
+    }
+
+    .about-image {
+      border: 1px solid #ede7df;
+      background: #fff;
+      padding: 1rem;
+    }
+    .about-image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      margin-top: 0;
+      border-bottom: 1px solid #e5dfd7;
+    }
+
+    .about-text h3 {
+      margin-top: 2rem;
+    }
+
+    .values-list {
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .values-list li {
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .values-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #b2926f;
+      font-weight: 400;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .team-card {
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 1.5rem;
+    }
+    .team-card h4 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+    }
+    .team-card .role {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #8c7e6e;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .info-card {
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 2rem;
+    }
+    .info-card h3 {
+      margin-top: 0;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #1e1e1e;
+      color: #cbc2b8;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .site-footer h4 {
+      color: #f0ebe5;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .site-footer ul {
+      list-style: none;
+    }
+    .site-footer li {
+      margin-bottom: 0.5rem;
+    }
+    .site-footer a {
+      color: #cbc2b8;
+      border-bottom: none;
+    }
+    .site-footer a:hover {
+      color: #d9b382;
+    }
+    .footer-bottom {
+      border-top: 1px solid #3b352f;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .main-nav ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 1rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        margin-top: 1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* UTILITY */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER (same as index) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Grounded Form <span>Stories</span></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search articles…" aria-label="Search articles">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="about-hero">
+      <h1>About Grounded Form Stories</h1>
+      <p class="lead">An independent editorial publication for people who believe that the spaces we inhabit shape how we live, think, and feel.</p>
+    </section>
+
+    <!-- INTRO GRID -->
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop" alt="Minimalist interior with natural light and warm materials">
+      </div>
+      <div class="about-text">
+        <h2>Our mission</h2>
+        <p>Grounded Form Stories was founded on a simple conviction: that good design writing should be as considered as the spaces it describes. We publish long-form articles, practical guides, and critical reflections that help readers understand not just <em>what</em> makes a room work, but <em>why</em>.</p>
+        <p>We are not a trend site. We don't chase viral interiors or seasonal colour palettes. Instead, we focus on enduring principles: material honesty, proportion, light, and the quiet details that make a house feel like home. Our content is grounded in real-world experience — written by designers, architects, and researchers who care about getting the details right.</p>
+        <p>Whether you're renovating a period property, specifying materials for a new build, or simply trying to make your living room feel more calm, we hope you'll find something useful here.</p>
+      </div>
+    </div>
+
+    <!-- VALUES -->
+    <section>
+      <h2>What we stand for</h2>
+      <ul class="values-list">
+        <li><strong>Substance over spectacle.</strong> We value depth, nuance, and practical knowledge over quick takes and aesthetic trends.</li>
+        <li><strong>Material honesty.</strong> We champion the beauty of real materials — wood, stone, metal, clay — and the way they age with grace.</li>
+        <li><strong>Slow design.</strong> Good interiors take time. We write for readers who are willing to think, plan, and invest in spaces that last.</li>
+        <li><strong>Independence.</strong> We are editorially independent. We don't accept sponsored content disguised as editorial, and we disclose any commercial relationships clearly.</li>
+        <li><strong>Accessibility.</strong> Design knowledge shouldn't be locked behind jargon. We aim to explain complex ideas in clear, readable language.</li>
+      </ul>
+    </section>
+
+    <!-- TEAM -->
+    <section>
+      <h2>Who we are</h2>
+      <p>Grounded Form Stories is produced by a small editorial team with backgrounds in architecture, interior design, and journalism. We also work with a network of contributing writers and subject-matter experts.</p>
+      <div class="team-grid">
+        <div class="team-card">
+          <h4>Elena Marsh</h4>
+          <div class="role">Editor</div>
+          <p style="font-size: 0.95rem;">Elena is an interior designer and writer with over a decade of experience in residential projects. She leads the editorial direction of the journal.</p>
+        </div>
+        <div class="team-card">
+          <h4>James Okonkwo</h4>
+          <div class="role">Architecture Editor</div>
+          <p style="font-size: 0.95rem;">James is a practising architect and critic. He writes about residential architecture, urbanism, and the relationship between buildings and landscape.</p>
+        </div>
+        <div class="team-card">
+          <h4>Clara Nguyen</h4>
+          <div class="role">Materials & Research</div>
+          <p style="font-size: 0.95rem;">Clara specialises in building materials and sustainable specification. She oversees our technical guides and material deep-dives.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL POLICY / CONTACT / PRIVACY -->
+    <section>
+      <h2>Editorial policy & information</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Editorial independence</h3>
+          <p>Our editorial content is never influenced by advertisers or commercial partners. We do not publish paid-for articles. Any sponsored content is clearly labelled as such. We strive for accuracy and welcome corrections — please <a href="mailto:editor@groundedformstories.com">contact us</a> if you spot an error.</p>
+          <p>We occasionally use affiliate links for books or tools we genuinely recommend. This never affects our editorial judgement, and we only link to products we have used or researched thoroughly.</p>
+        </div>
+        <div class="info-card">
+          <h3>Contact & submissions</h3>
+          <p>We welcome thoughtful questions, story ideas, and pitches from writers and designers. Please email <a href="mailto:editor@groundedformstories.com">editor@groundedformstories.com</a>. We read every message but cannot always respond individually.</p>
+          <p>If you are a PR professional or brand, please note that we do not accept unsolicited product samples for review, and we do not guarantee coverage.</p>
+        </div>
+        <div class="info-card">
+          <h3>Privacy & cookies</h3>
+          <p>We respect your privacy. This site does not collect personal data unless you voluntarily subscribe to our newsletter. We never sell or share email addresses. Analytics are anonymised and used only to improve content. For more details, see our <a href="privacy.html">Privacy Policy</a> and <a href="cookies.html">Cookies Policy</a>.</p>
+        </div>
+        <div class="info-card">
+          <h3>Terms of use</h3>
+          <p>All content is provided for general information. We strive for accuracy but welcome corrections. Reproduction of articles requires permission. Links to external sites are provided for context; we are not responsible for their content. See our full <a href="terms.html">Terms of Use</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SMALL CTA / NEWSLETTER MENTION -->
+    <section style="margin: 3rem 0; text-align: center; background: #f6f2ed; border: 1px solid #e2dbd2; padding: 2rem;">
+      <h3 style="margin-top: 0;">Stay in touch</h3>
+      <p style="max-width: 500px; margin: 0 auto 1rem;">We publish a monthly digest of our best long reads. No spam, no noise — just thoughtful writing on design and architecture.</p>
+      <p style="margin-bottom: 0;"><a href="index.html#newsletter" style="font-weight: 500;">Subscribe to the newsletter →</a></p>
+    </section>
+  </main>
+
+  <!-- FOOTER (same as index) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Grounded Form Stories</h4>
+          <p style="font-size: 0.9rem; max-width: 300px;">An independent journal for interior design and architecture. We publish thoughtful, practical, and original content for people who care about the spaces they live in.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#interior">Interior Design</a></li>
+            <li><a href="index.html#architecture">Architecture</a></li>
+            <li><a href="index.html#materials">Materials</a></li>
+            <li><a href="index.html#lighting">Lighting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Grounded Form Stories. All rights reserved.</span>
+        <span>Made with restraint.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCHEMA MARKUP (AboutPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Grounded Form Stories",
+    "description": "Independent editorial publication exploring interior design, architecture, materials, space planning, lighting, and modern living.",
+    "url": "https://groundedformstories.com/about.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Grounded Form Stories",
+      "description": "An independent journal for interior design and architecture, publishing thoughtful, practical, and original content.",
+      "foundingDate": "2020",
+      "email": "editor@groundedformstories.com",
+      "url": "https://groundedformstories.com"
+    }
+  }
+  </script>
+
+  <!-- INTERACTIVE JS (minimal, search still present but no blog cards on this page) -->
+  <script>
+    (function() {
+      // Search filtering – on about page there are no post cards, but we can still
+      // redirect to index with query if desired. For simplicity, we just disable.
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+        // Optional: redirect to index with search query on enter
+        searchInput.addEventListener('keypress', function(e) {
+          if (e.key === 'Enter') {
+            const query = this.value.trim();
+            if (query) {
+              window.location.href = 'index.html?search=' + encodeURIComponent(query);
+            }
+          }
+        });
+      }
+
+      // Smooth anchor scrolling (for internal links)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

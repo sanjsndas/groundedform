@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grounded Form Stories · Interior Design & Architecture Journal</title>
+  <meta name="description" content="Independent editorial publication exploring interior design, architecture, materials, space planning, lighting, and modern living. Long-form guides and design knowledge.">
+  <meta name="keywords" content="interior design, architecture, home design, materials, space planning, lighting, furniture, modern homes">
+  <meta name="author" content="Grounded Form Stories">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Grounded Form Stories · Interior Design & Architecture Journal">
+  <meta property="og:description" content="Independent editorial publication exploring interior design, architecture, materials, space planning, lighting, and modern living.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://groundedformstories.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&h=630&fit=crop">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://groundedformstories.com">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fcfaf7;
+      color: #1e1e1e;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid #e5dfd7;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+    h4 {
+      font-size: 1.25rem;
+      margin: 1.25rem 0 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: #4a3f35;
+      text-decoration: none;
+      border-bottom: 1px solid #d9d0c5;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #8b6b4f;
+      border-bottom-color: #8b6b4f;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* LAYOUT */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* HEADER */
+    .site-header {
+      background: #fcfaf7;
+      border-bottom: 1px solid #e2dbd2;
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+      border-bottom: none;
+    }
+    .logo span {
+      color: #b2926f;
+      font-style: italic;
+    }
+    .main-nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .main-nav a {
+      border-bottom: none;
+      font-size: 0.95rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #3b352f;
+    }
+    .main-nav a:hover {
+      color: #b2926f;
+    }
+    .search-bar {
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d9d0c5;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      border-radius: 0;
+    }
+    .search-bar input:focus {
+      outline: 1px solid #b2926f;
+      border-color: #b2926f;
+    }
+    /* BLOG GRID */
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 3rem;
+      margin: 3rem 0;
+    }
+    .featured-post {
+      grid-column: 1 / -1;
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .featured-post img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border: 1px solid #e2dbd2;
+    }
+    .featured-post h2 {
+      border-bottom: none;
+      margin-top: 0;
+      font-size: 2.2rem;
+      padding-bottom: 0;
+    }
+    .post-meta {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #8c7e6e;
+      margin-bottom: 0.75rem;
+    }
+    .post-card {
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.2s;
+    }
+    .post-card:hover {
+      border-color: #cbb9a6;
+    }
+    .post-card .category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #b2926f;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .post-card h3 {
+      margin: 0.5rem 0 1rem;
+      font-size: 1.6rem;
+    }
+    .post-card .excerpt {
+      color: #4b443c;
+      margin-bottom: 1rem;
+    }
+    .reading-time {
+      font-size: 0.8rem;
+      color: #8c7e6e;
+    }
+    /* SIDEBAR */
+    .sidebar {
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 1.75rem;
+      align-self: start;
+      position: sticky;
+      top: 100px;
+    }
+    .sidebar h3 {
+      font-size: 1.25rem;
+      border-bottom: 1px solid #e2dbd2;
+      padding-bottom: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .sidebar h3:first-of-type {
+      margin-top: 0;
+    }
+    .sidebar ul {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar li {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .popular-list li {
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #f0ebe5;
+    }
+    .popular-list a {
+      border-bottom: none;
+      font-weight: 400;
+    }
+    .newsletter-box {
+      background: #f6f2ed;
+      padding: 1.5rem;
+      border: 1px solid #e2dbd2;
+      margin: 1.5rem 0;
+    }
+    .newsletter-box input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d9d0c5;
+      margin: 0.75rem 0;
+      font-family: 'Inter', sans-serif;
+    }
+    .newsletter-box button {
+      background: #1e1e1e;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      width: 100%;
+    }
+    .newsletter-box button:hover {
+      background: #4a3f35;
+    }
+    /* ARTICLE SECTIONS */
+    .article-section {
+      margin: 3rem 0;
+      padding-top: 1rem;
+      border-top: 1px solid #e2dbd2;
+    }
+    .article-section h2 {
+      font-size: 1.8rem;
+      margin-top: 0;
+    }
+    .article-body p {
+      margin-bottom: 1.5rem;
+    }
+    .article-body ul, .article-body ol {
+      margin: 1.5rem 0 1.5rem 2rem;
+    }
+    .article-body li {
+      margin-bottom: 0.5rem;
+    }
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #e2dbd2;
+      padding: 1.25rem 0;
+    }
+    .faq-question {
+      font-weight: 500;
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: #b2926f;
+      margin-left: 1rem;
+    }
+    .faq-question.active::after {
+      content: "–";
+    }
+    .faq-answer {
+      display: none;
+      padding-top: 0.5rem;
+      color: #4b443c;
+    }
+    .faq-answer.show {
+      display: block;
+    }
+    /* ABOUT / CONTACT SECTIONS */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin: 3rem 0;
+    }
+    .info-card {
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 2rem;
+    }
+    .info-card h3 {
+      margin-top: 0;
+    }
+    /* FOOTER */
+    .site-footer {
+      background: #1e1e1e;
+      color: #cbc2b8;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .site-footer h4 {
+      color: #f0ebe5;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .site-footer ul {
+      list-style: none;
+    }
+    .site-footer li {
+      margin-bottom: 0.5rem;
+    }
+    .site-footer a {
+      color: #cbc2b8;
+      border-bottom: none;
+    }
+    .site-footer a:hover {
+      color: #d9b382;
+    }
+    .footer-bottom {
+      border-top: 1px solid #3b352f;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .blog-layout {
+        grid-template-columns: 1fr;
+      }
+      .featured-post {
+        grid-template-columns: 1fr;
+      }
+      .featured-post img {
+        height: 220px;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .main-nav ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 1rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        margin-top: 1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .featured-post {
+        padding: 1.5rem;
+      }
+    }
+    /* UTILITY */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Grounded Form <span>Stories</span></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+         <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search articles…" aria-label="Search articles">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- FEATURED POST -->
+    <article class="featured-post" id="featured">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop" alt="Modern living room with warm wood accents and a large window overlooking a garden">
+      <div>
+        <div class="post-meta">Featured · Interior Design</div>
+        <h2><a href="#featured-article" style="border-bottom: none;">The Quiet Power of Material Honesty in Modern Interiors</a></h2>
+        <p>Why raw wood, untreated stone, and visible grain are reshaping contemporary homes — and how to use them without nostalgia.</p>
+        <div class="reading-time">12 min read</div>
+      </div>
+    </article>
+
+    <!-- BLOG LAYOUT: MAIN + SIDEBAR -->
+    <div class="blog-layout">
+      <!-- MAIN COLUMN -->
+      <div class="main-column">
+
+        <!-- ARTICLE 1 -->
+        <article class="post-card" id="interior">
+          <div class="category">Interior Design</div>
+          <h3><a href="#article-interior" style="border-bottom: none;">The Art of Slow Interiors: Designing Rooms That Breathe</a></h3>
+          <p class="excerpt">In a world of fast trends, a quiet movement is gaining ground: interiors that prioritise calm, texture, and longevity over novelty. We explore the principles behind slow design and how to apply them room by room.</p>
+          <div class="reading-time">9 min read</div>
+        </article>
+
+        <!-- ARTICLE 2 -->
+        <article class="post-card" id="architecture">
+          <div class="category">Architecture</div>
+          <h3><a href="#article-architecture" style="border-bottom: none;">Residential Architecture After the Open Plan: Why Rooms Are Returning</a></h3>
+          <p class="excerpt">The great room is being gently subdivided. Architects and homeowners are rediscovering the psychological comfort of defined spaces — without losing light or flow.</p>
+          <div class="reading-time">11 min read</div>
+        </article>
+
+        <!-- ARTICLE 3 -->
+        <article class="post-card" id="materials">
+          <div class="category">Materials</div>
+          <h3><a href="#article-materials" style="border-bottom: none;">A Practical Guide to Choosing Stone for Interiors</a></h3>
+          <p class="excerpt">Marble, limestone, travertine, slate — each has a distinct character, maintenance profile, and best application. This guide helps you specify the right stone for floors, walls, and worktops.</p>
+          <div class="reading-time">14 min read</div>
+        </article>
+
+        <!-- ARTICLE 4 -->
+        <article class="post-card" id="lighting">
+          <div class="category">Lighting</div>
+          <h3><a href="#article-lighting" style="border-bottom: none;">Layered Lighting: The Difference Between a Lit Room and a Designed Room</a></h3>
+          <p class="excerpt">Good lighting is not about brightness; it’s about atmosphere. Learn how to combine ambient, task, and accent light to transform how a space feels at different times of day.</p>
+          <div class="reading-time">8 min read</div>
+        </article>
+
+        <!-- ARTICLE 5 -->
+        <article class="post-card" id="spaces">
+          <div class="category">Space Planning</div>
+          <h3><a href="#article-spaces" style="border-bottom: none;">Small Spaces, Big Thinking: Circulation, Storage, and Light</a></h3>
+          <p class="excerpt">Compact living doesn’t mean compromise. These planning strategies help you make every square metre work harder — without visual clutter.</p>
+          <div class="reading-time">10 min read</div>
+        </article>
+
+        <!-- ARTICLE 6 -->
+        <article class="post-card" id="furniture">
+          <div class="category">Furniture</div>
+          <h3><a href="#article-furniture" style="border-bottom: none;">The Case for Fewer, Better Pieces</a></h3>
+          <p class="excerpt">How to build a home around a small collection of well-made furniture — and why restraint often creates more character than accumulation.</p>
+          <div class="reading-time">7 min read</div>
+        </article>
+
+        <!-- LONG-FORM ARTICLE SECTION -->
+        <section class="article-section" id="featured-article">
+          <h2>Featured Long Read</h2>
+          <div class="article-body">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=450&fit=crop" alt="Minimalist bedroom with linen bedding and soft natural light" style="margin-bottom: 1.5rem;">
+            <h3>The Quiet Power of Material Honesty in Modern Interiors</h3>
+            <p>There is a moment in every well-designed interior when you stop noticing the “design” and simply feel the space. More often than not, that moment is born from material honesty — the decision to let wood look like wood, stone like stone, and metal like metal. No faux finishes, no plastic imitations, no veneers pretending to be solid.</p>
+            <p>This is not a nostalgic return to rustic cabins. It is a contemporary sensibility that values authenticity, tactile richness, and the quiet beauty of imperfection. In this long read, we explore how material honesty shapes atmosphere, how to specify materials that age gracefully, and why the most memorable rooms are often the least decorated.</p>
+            <h4>Why honesty matters</h4>
+            <p>Materials carry memory. A solid oak floor develops a patina from daily life; a limestone wall absorbs light differently in the morning and evening; brass hardware darkens with touch. These changes are not flaws — they are the narrative of a lived-in space. Synthetic materials, by contrast, tend to look the same on day one and year ten, which can feel sterile.</p>
+            <p>Honest materials also connect us to place. Using local stone or timber reduces transport emissions and grounds a building in its landscape. In an era of global supply chains, that regional specificity is increasingly precious.</p>
+            <h4>How to use them well</h4>
+            <p>Start with a restrained palette: two or three primary materials, each with a clear role. Let one dominate (e.g., warm timber), one support (e.g., pale plaster), and one accent (e.g., blackened steel). Avoid mixing too many textures — restraint amplifies the impact of each.</p>
+            <p>Consider maintenance honestly. Some materials require sealing, oiling, or gentle cleaning. If you are not prepared for that, choose a finish that will age gracefully without fuss. For example, honed marble etches, but many find the patina charming; polished porcelain is low-maintenance but can feel cold.</p>
+            <p>Finally, let the materials speak. Skip the heavy ornament and allow joints, grain, and natural variation to become the decoration. In doing so, you create interiors that feel grounded, timeless, and deeply human.</p>
+          </div>
+        </section>
+
+        <!-- MORE ARTICLES -->
+        <section class="article-section">
+          <h2>Latest from the Journal</h2>
+          <article class="post-card">
+            <div class="category">Modern Homes</div>
+            <h3><a href="#article-modern" style="border-bottom: none;">Glass, Steel, and Warmth: Softening Modernist Interiors</a></h3>
+            <p class="excerpt">Modern architecture can feel cold if materials are not balanced. Here’s how to introduce warmth through texture, colour, and lighting without compromising the clarity of the original design.</p>
+            <div class="reading-time">8 min read</div>
+          </article>
+          <article class="post-card">
+            <div class="category">Renovation</div>
+            <h3><a href="#article-renovation" style="border-bottom: none;">Renovating a Period Home: What to Keep, What to Change</a></h3>
+            <p class="excerpt">Original features add soul, but not every detail suits modern life. A practical framework for making respectful, liveable updates to older houses.</p>
+            <div class="reading-time">13 min read</div>
+          </article>
+          <article class="post-card">
+            <div class="category">Design Principles</div>
+            <h3><a href="#article-principles" style="border-bottom: none;">Scale and Proportion: The Invisible Rules of Good Rooms</a></h3>
+            <p class="excerpt">Why a sofa can look wrong in a large room, and how to use the golden ratio, human scale, and negative space to create balance.</p>
+            <div class="reading-time">9 min read</div>
+          </article>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="article-section" id="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-item">
+            <div class="faq-question">How do I start designing a room from scratch?</div>
+            <div class="faq-answer">Begin with function: how will the room be used, who uses it, and what needs to be stored or displayed? Then establish a layout that supports circulation and conversation. Only after that should you choose colours, materials, and furniture. A useful exercise is to create a mood board with textures and tones, but always test them in the actual light of the room.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">What is the ideal ceiling height for a comfortable room?</div>
+            <div class="faq-answer">There is no single ideal, but proportion matters more than absolute height. A room feels comfortable when the ceiling height relates well to the floor area and window proportions. As a rule of thumb, ceilings below 2.4m can feel intimate; above 3m they feel generous but may need visual anchoring through lighting or wall treatments.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">How can I make a small space feel larger?</div>
+            <div class="faq-answer">Maximise natural light, use a consistent floor material throughout, choose furniture with legs (so floor is visible), and avoid heavy curtains. Mirrors can help but should be placed to reflect light or a view, not just for the sake of it. Vertical storage and built-ins reduce visual clutter.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">Are open-plan layouts still popular?</div>
+            <div class="faq-answer">Yes, but with nuance. Many homeowners now prefer a broken-plan approach — open but with zones defined by level changes, partial walls, or furniture. This balances connection with acoustic and visual privacy.</div>
+          </div>
+        </section>
+
+        <!-- ABOUT / CONTACT / PRIVACY / TERMS / COOKIE -->
+        <section class="article-section" id="about">
+          <h2>About Grounded Form Stories</h2>
+          <p>Grounded Form Stories is an independent editorial publication dedicated to interior design and architecture. We publish long-form articles, practical guides, and critical reflections for homeowners, designers, and anyone who cares about the spaces we inhabit. Our approach is content-first: no fluff, no trend-chasing, just useful knowledge grounded in real-world experience.</p>
+          <div class="info-grid">
+            <div class="info-card" id="contact">
+              <h3>Contact</h3>
+              <p>We welcome thoughtful questions, corrections, and story ideas. Reach us at <a href="mailto:editor@groundedformstories.com">editor@groundedformstories.com</a>. We read every message but cannot always respond individually.</p>
+            </div>
+            <div class="info-card" id="privacy">
+              <h3>Privacy</h3>
+              <p>We respect your privacy. This site does not collect personal data unless you voluntarily subscribe to our newsletter. We never sell or share email addresses. Analytics are anonymised and used only to improve content.</p>
+            </div>
+            <div class="info-card" id="terms">
+              <h3>Terms</h3>
+              <p>All content is provided for general information. We strive for accuracy but welcome corrections. Reproduction of articles requires permission. Links to external sites are provided for context; we are not responsible for their content.</p>
+            </div>
+            <div class="info-card" id="cookie">
+              <h3>Cookie Policy</h3>
+              <p>This website uses minimal cookies for basic functionality and anonymous analytics. By continuing to browse, you consent to our use of cookies. You can disable cookies in your browser settings.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Sidebar">
+        <h3>Popular Articles</h3>
+        <ul class="popular-list">
+          <li><a href="#article-lighting">Layered Lighting: The Difference Between a Lit Room and a Designed Room</a></li>
+          <li><a href="#article-materials">A Practical Guide to Choosing Stone for Interiors</a></li>
+          <li><a href="#article-spaces">Small Spaces, Big Thinking: Circulation, Storage, and Light</a></li>
+          <li><a href="#article-architecture">Residential Architecture After the Open Plan</a></li>
+        </ul>
+
+        <h3>Editor’s Picks</h3>
+        <ul>
+          <li><a href="#article-interior">The Art of Slow Interiors</a></li>
+          <li><a href="#article-furniture">The Case for Fewer, Better Pieces</a></li>
+          <li><a href="#article-principles">Scale and Proportion: The Invisible Rules</a></li>
+        </ul>
+
+        <div class="newsletter-box">
+          <h4>Newsletter</h4>
+          <p style="font-size: 0.9rem;">Monthly digest of our best long reads. No spam.</p>
+          <input type="email" placeholder="Your email address" aria-label="Email address">
+          <button type="button">Subscribe</button>
+        </div>
+
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#interior">Interior Design</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#lighting">Lighting</a></li>
+          <li><a href="#spaces">Space Planning</a></li>
+          <li><a href="#furniture">Furniture</a></li>
+          <li><a href="#modern">Modern Homes</a></li>
+          <li><a href="#renovation">Renovation</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Grounded Form Stories</h4>
+          <p style="font-size: 0.9rem; max-width: 300px;">An independent journal for interior design and architecture. We publish thoughtful, practical, and original content for people who care about the spaces they live in.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#interior">Interior Design</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#materials">Materials</a></li>
+            <li><a href="#lighting">Lighting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+            <li><a href="#cookie">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Grounded Form Stories. All rights reserved.</span>
+        <span>Made with restraint.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCHEMA MARKUP -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Grounded Form Stories",
+    "description": "Independent editorial publication exploring interior design, architecture, materials, space planning, lighting, and modern living.",
+    "url": "https://groundedformstories.com",
+    "author": {
+      "@type": "Organization",
+      "name": "Grounded Form Stories"
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "The Quiet Power of Material Honesty in Modern Interiors",
+        "description": "Why raw wood, untreated stone, and visible grain are reshaping contemporary homes.",
+        "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+        "author": {"@type": "Person", "name": "Editorial Team"},
+        "datePublished": "2025-02-10",
+        "readingTime": "12 min"
+      }
+    ]
+  }
+  </script>
+
+  <!-- INTERACTIVE JS -->
+  <script>
+    (function() {
+      // FAQ toggle
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(q => {
+        q.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const answer = this.nextElementSibling;
+          if (answer) {
+            answer.classList.toggle('show');
+          }
+        });
+      });
+
+      // Search filtering
+      const searchInput = document.getElementById('searchInput');
+      const postCards = document.querySelectorAll('.post-card, .featured-post');
+
+      function filterPosts() {
+        const query = searchInput.value.trim().toLowerCase();
+        postCards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (query === '' || text.includes(query)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        // also hide article sections if no match? (keep them visible for simplicity)
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', filterPosts);
+      }
+
+      // Smooth anchor scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

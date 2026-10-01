@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact · Grounded Form Stories</title>
+  <meta name="description" content="Get in touch with Grounded Form Stories. Editorial questions, story ideas, corrections, or just to say hello.">
+  <meta name="keywords" content="contact, interior design journal, architecture publication, editorial, story ideas">
+  <meta name="author" content="Grounded Form Stories">
+  <link rel="canonical" href="https://groundedformstories.com/contact.html">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <style>
+    /* RESET & BASE (same as main) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #fcfaf7;
+      color: #1e1e1e;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'DM Serif Display', serif;
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid #e5dfd7;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 1.5rem 0 0.75rem;
+    }
+    h4 {
+      font-size: 1.25rem;
+      margin: 1.25rem 0 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    p {
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: #4a3f35;
+      text-decoration: none;
+      border-bottom: 1px solid #d9d0c5;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #8b6b4f;
+      border-bottom-color: #8b6b4f;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* LAYOUT */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    /* HEADER */
+    .site-header {
+      background: #fcfaf7;
+      border-bottom: 1px solid #e2dbd2;
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+    .header-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+      border-bottom: none;
+    }
+    .logo span {
+      color: #b2926f;
+      font-style: italic;
+    }
+    .main-nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .main-nav a {
+      border-bottom: none;
+      font-size: 0.95rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #3b352f;
+    }
+    .main-nav a:hover {
+      color: #b2926f;
+    }
+    .search-bar {
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d9d0c5;
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      border-radius: 0;
+    }
+    .search-bar input:focus {
+      outline: 1px solid #b2926f;
+      border-color: #b2926f;
+    }
+    /* PAGE HEADER */
+    .page-header {
+      margin: 3rem 0 1.5rem;
+    }
+    .page-header h1 {
+      margin-bottom: 0.5rem;
+    }
+    .page-header .subhead {
+      font-size: 1.2rem;
+      color: #4b443c;
+      max-width: 720px;
+    }
+    /* CONTACT GRID */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      margin: 2rem 0 3rem;
+    }
+    .contact-form-wrapper {
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 2rem;
+    }
+    .contact-form-wrapper h2 {
+      margin-top: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+      font-size: 1.8rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #4a3f35;
+      margin-bottom: 0.5rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid #d9d0c5;
+      background: #fcfaf7;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      border-radius: 0;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #b2926f;
+      background: #fff;
+    }
+    .form-group textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+    .form-group .hint {
+      font-size: 0.8rem;
+      color: #8c7e6e;
+      margin-top: 0.35rem;
+    }
+    .btn-submit {
+      background: #1e1e1e;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .btn-submit:hover {
+      background: #4a3f35;
+    }
+    .form-note {
+      font-size: 0.8rem;
+      color: #8c7e6e;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    /* CONTACT SIDEBAR */
+    .contact-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .contact-card {
+      background: #fff;
+      border: 1px solid #ede7df;
+      padding: 1.75rem;
+    }
+    .contact-card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      border-bottom: 1px solid #e2dbd2;
+      padding-bottom: 0.5rem;
+    }
+    .contact-card ul {
+      list-style: none;
+      margin-top: 0.5rem;
+    }
+    .contact-card li {
+      margin-bottom: 1rem;
+      font-size: 0.98rem;
+    }
+    .contact-card li strong {
+      display: block;
+      font-weight: 500;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8c7e6e;
+      margin-bottom: 0.15rem;
+    }
+    .contact-card li a {
+      border-bottom: 1px solid #d9d0c5;
+    }
+    .response-time {
+      background: #f6f2ed;
+      padding: 1.25rem;
+      border: 1px solid #e2dbd2;
+      font-size: 0.9rem;
+      color: #4b443c;
+    }
+    .response-time p {
+      margin-bottom: 0.5rem;
+    }
+    .response-time p:last-child {
+      margin-bottom: 0;
+    }
+    /* FAQ (reuse from main) */
+    .faq-section {
+      margin: 3rem 0 2rem;
+      border-top: 1px solid #e2dbd2;
+      padding-top: 2rem;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e2dbd2;
+      padding: 1.25rem 0;
+    }
+    .faq-question {
+      font-weight: 500;
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: #b2926f;
+      margin-left: 1rem;
+    }
+    .faq-question.active::after {
+      content: "–";
+    }
+    .faq-answer {
+      display: none;
+      padding-top: 0.5rem;
+      color: #4b443c;
+    }
+    .faq-answer.show {
+      display: block;
+    }
+    /* FOOTER (same as main) */
+    .site-footer {
+      background: #1e1e1e;
+      color: #cbc2b8;
+      padding: 3rem 0 2rem;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    .site-footer h4 {
+      color: #f0ebe5;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .site-footer ul {
+      list-style: none;
+    }
+    .site-footer li {
+      margin-bottom: 0.5rem;
+    }
+    .site-footer a {
+      color: #cbc2b8;
+      border-bottom: none;
+    }
+    .site-footer a:hover {
+      color: #d9b382;
+    }
+    .footer-bottom {
+      border-top: 1px solid #3b352f;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .main-nav ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 1rem;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav ul {
+        margin-top: 1rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-form-wrapper {
+        padding: 1.5rem;
+      }
+    }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Grounded Form <span>Stories</span></div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search articles…" aria-label="Search articles">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <h1>Let’s talk</h1>
+      <p class="subhead">We read every message — whether it’s a thoughtful question, a correction, a story pitch, or just a note about a room you love. No fluff, no auto-replies.</p>
+    </div>
+
+    <!-- CONTACT GRID -->
+    <div class="contact-grid">
+      <!-- FORM -->
+      <div class="contact-form-wrapper">
+        <h2>Send a message</h2>
+        <form id="contactForm" action="#" method="post" novalidate>
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Alex Morgan" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <div class="hint">We’ll never share your email. Ever.</div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="general">General question</option>
+              <option value="story">Story idea / pitch</option>
+              <option value="correction">Correction or update</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what’s on your mind…" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send message</button>
+          <div class="form-note">We typically reply within 2–3 working days. No spam, no newsletters unless you ask.</div>
+        </form>
+        <div id="formFeedback" style="margin-top: 1rem; display: none; padding: 1rem; background: #f0ebe5; border-left: 3px solid #b2926f; font-size: 0.95rem;"></div>
+      </div>
+
+      <!-- SIDEBAR INFO -->
+      <div class="contact-sidebar">
+        <div class="contact-card">
+          <h3>Editorial</h3>
+          <ul>
+            <li>
+              <strong>Email</strong>
+              <a href="mailto:editor@groundedformstories.com">editor@groundedformstories.com</a>
+            </li>
+            <li>
+              <strong>Postal</strong>
+              Grounded Form Stories<br>
+              Studio 14, 221 Canal Road<br>
+              London, N1 7UX
+            </li>
+            <li>
+              <strong>Social</strong>
+              <a href="#">Instagram</a> · <a href="#">Pinterest</a> · <a href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-card">
+          <h3>For writers &amp; PR</h3>
+          <p style="font-size: 0.95rem;">We welcome pitches that align with our editorial focus: material honesty, slow interiors, spatial psychology, and practical design knowledge. Please include a short outline and links to previous work.</p>
+          <p style="font-size: 0.95rem; margin-bottom: 0;">Send to <a href="mailto:pitch@groundedformstories.com">pitch@groundedformstories.com</a>.</p>
+        </div>
+
+        <div class="response-time">
+          <p><strong>Response times</strong></p>
+          <p>General questions: 2–3 days<br>
+          Story pitches: 5–7 days<br>
+          Corrections: usually within 24h</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ SECTION (adapted) -->
+    <section class="faq-section" id="faq-contact">
+      <h2>Before you write</h2>
+      <div class="faq-item">
+        <div class="faq-question">Can I republish your articles?</div>
+        <div class="faq-answer">We’re happy for you to quote short excerpts with a clear link back to the original. For full reproductions, please email us first. We usually say yes for non-commercial, educational use.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you accept sponsored posts?</div>
+        <div class="faq-answer">No. We keep our editorial independent. We do not publish sponsored content, affiliate-driven articles, or paid links. Any partnership would be clearly labelled and rare.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">I have a design question — can you help?</div>
+        <div class="faq-answer">We’re a publication, not a design consultancy. However, we often answer general questions in our FAQ or future articles. Send it over — if it’s broadly useful, we might write about it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">How do I submit a correction?</div>
+        <div class="faq-answer">Email us with the article title, the specific error, and a source if possible. We review all corrections and update articles promptly with a note if needed.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Grounded Form Stories</h4>
+          <p style="font-size: 0.9rem; max-width: 300px;">An independent journal for interior design and architecture. We publish thoughtful, practical, and original content for people who care about the spaces they live in.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#interior">Interior Design</a></li>
+            <li><a href="index.html#architecture">Architecture</a></li>
+            <li><a href="index.html#materials">Materials</a></li>
+            <li><a href="index.html#lighting">Lighting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="terms.html">Terms</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Grounded Form Stories. All rights reserved.</span>
+        <span>Made with restraint.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE JS (FAQ, form, search) -->
+  <script>
+    (function() {
+      // FAQ toggle
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(q => {
+        q.addEventListener('click', function() {
+          this.classList.toggle('active');
+          const answer = this.nextElementSibling;
+          if (answer) {
+            answer.classList.toggle('show');
+          }
+        });
+      });
+
+      // Search filtering (only posts on page – here not many, but keep consistent)
+      const searchInput = document.getElementById('searchInput');
+      const postCards = document.querySelectorAll('.post-card, .featured-post');
+      function filterPosts() {
+        if (!searchInput) return;
+        const query = searchInput.value.trim().toLowerCase();
+        postCards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (query === '' || text.includes(query)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+      if (searchInput) {
+        searchInput.addEventListener('input', filterPosts);
+      }
+
+      // Smooth anchor scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          const target = document.querySelector(targetId);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Contact form submission (demo)
+      const contactForm = document.getElementById('contactForm');
+      const formFeedback = document.getElementById('formFeedback');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
+          if (!name || !email || !message) {
+            formFeedback.style.display = 'block';
+            formFeedback.textContent = 'Please fill in your name, email, and message.';
+            formFeedback.style.borderLeftColor = '#b33a3a';
+            return;
+          }
+          // Simulate success (no actual backend)
+          formFeedback.style.display = 'block';
+          formFeedback.style.borderLeftColor = '#b2926f';
+          formFeedback.textContent = 'Thank you, ' + name + '. Your message has been sent — we’ll be in touch soon. (This is a demo; no data was actually submitted.)';
+          contactForm.reset();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
